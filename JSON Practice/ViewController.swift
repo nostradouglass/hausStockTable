@@ -27,10 +27,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+		let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+		
+	cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+	cell.detailTextLabel?.numberOfLines = 0;
 		
 		if let productsReturned = productsArr {
 			cell.textLabel?.text = String(describing: productsReturned[indexPath.row]["productName"])
+			cell.detailTextLabel?.text = String(describing: productsReturned[indexPath.row]["totalStock"])
+			
 		}
 		return cell
 		
