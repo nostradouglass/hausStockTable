@@ -12,9 +12,12 @@
 		AC4D30161FD118B900B60CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4D30141FD118B900B60CA9 /* Main.storyboard */; };
 		AC4D30181FD118B900B60CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4D30171FD118B900B60CA9 /* Assets.xcassets */; };
 		AC4D301B1FD118B900B60CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4D30191FD118B900B60CA9 /* LaunchScreen.storyboard */; };
+		F3C59A025994C554489462A1 /* Pods_JSON_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0444B11F9F902BC75F084E76 /* Pods_JSON_Practice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0444B11F9F902BC75F084E76 /* Pods_JSON_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSON_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		717BB9C374C5E886AD61978C /* Pods-JSON Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSON Practice/Pods-JSON Practice.release.xcconfig"; sourceTree = "<group>"; };
 		AC4D300D1FD118B900B60CA9 /* JSON Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4D30101FD118B900B60CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4D30121FD118B900B60CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		AC4D30171FD118B900B60CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC4D301A1FD118B900B60CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4D301C1FD118B900B60CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D297CFC73DE8DA9C0B4EC4DC /* Pods-JSON Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSON Practice/Pods-JSON Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C59A025994C554489462A1 /* Pods_JSON_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BAF7316D4304AD29084BAF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D297CFC73DE8DA9C0B4EC4DC /* Pods-JSON Practice.debug.xcconfig */,
+				717BB9C374C5E886AD61978C /* Pods-JSON Practice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76F8FF186F425F662847E702 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0444B11F9F902BC75F084E76 /* Pods_JSON_Practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC4D30041FD118B900B60CA9 = {
 			isa = PBXGroup;
 			children = (
 				AC4D300F1FD118B900B60CA9 /* JSON Practice */,
 				AC4D300E1FD118B900B60CA9 /* Products */,
+				4BAF7316D4304AD29084BAF2 /* Pods */,
+				76F8FF186F425F662847E702 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC4D301F1FD118B900B60CA9 /* Build configuration list for PBXNativeTarget "JSON Practice" */;
 			buildPhases = (
+				A45A6ED5BB4B3A82CEB9986D /* [CP] Check Pods Manifest.lock */,
 				AC4D30091FD118B900B60CA9 /* Sources */,
 				AC4D300A1FD118B900B60CA9 /* Frameworks */,
 				AC4D300B1FD118B900B60CA9 /* Resources */,
+				61334AB6AF2A4853D7F64682 /* [CP] Embed Pods Frameworks */,
+				CA18798D66FC34AC4FC4BD93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61334AB6AF2A4853D7F64682 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JSON Practice/Pods-JSON Practice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSON Practice/Pods-JSON Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A45A6ED5BB4B3A82CEB9986D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSON Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA18798D66FC34AC4FC4BD93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSON Practice/Pods-JSON Practice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC4D30091FD118B900B60CA9 /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		AC4D30201FD118B900B60CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D297CFC73DE8DA9C0B4EC4DC /* Pods-JSON Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +371,7 @@
 		};
 		AC4D30211FD118B900B60CA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717BB9C374C5E886AD61978C /* Pods-JSON Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
