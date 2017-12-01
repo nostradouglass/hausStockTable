@@ -1,0 +1,6 @@
+framework module Pods_JSON_Practice {
+  umbrella header "Pods-JSON Practice-umbrella.h"
+
+  export *
+  module * { export * }
+}
